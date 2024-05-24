@@ -8,4 +8,4 @@
 mkdir -p ../certs
 
 # Generate publi - private key 
-openssl req -newkey rsa:2048 -nodes -keyout ../certs/certificate.key -x509 -out ../certs/certificate.pem -subj '/CN=Test Certificate' -addext "subjectAltName = DNS:ec2-34-212-71-222.us-west-2.compute.amazonaws.com"
+openssl req -newkey rsa:2048 -nodes -keyout ../certs/certificate.key -x509 -out ../certs/certificate.pem -subj '/CN=Test Certificate' -addext "subjectAltName = IP:34.212.71.222"
