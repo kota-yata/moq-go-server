@@ -13,6 +13,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	log "github.com/sirupsen/logrus"
 )
 
 const MAX_PUBLISH_NAMESPACES_PER_SESSION = 256
@@ -116,6 +118,7 @@ func (s *MoqSession) HasTrackNamespace(trackNamespace string) bool {
 func (s *MoqSession) AddTrackInfo(trackNamespace string, trackName string, trackId uint64) (err error) {
 	s.lock.Lock()
 	defer s.lock.Unlock()
+	log.Info(fmt.Sprintf("AddTrackInfo: %s %s %d", trackNamespace, trackName, trackId))
 
 	namespaceInfo, found := s.namespaces[trackNamespace]
 	if found {
