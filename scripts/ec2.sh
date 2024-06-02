@@ -8,4 +8,4 @@
 mkdir -p ../certs
 
 # Generate publi - private key 
-openssl req -newkey rsa:2048 -nodes -keyout ../certs/certificate.key -x509 -out ../certs/certificate.pem -subj '/CN=34.220.254.22' -addext "subjectAltName=IP:34.220.254.22"
+openssl req -newkey rsa:2048 -nodes -keyout ../certs/certificate.key -x509 -out ../certs/certificate.pem -subj '/CN=44.237.11.243' -addext "subjectAltName=IP:44.237.11.243"
